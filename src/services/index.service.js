@@ -1,11 +1,14 @@
+import dotenv from 'dotenv';
 import axios from 'axios';
 import md5 from 'md5';
 import crypto from 'crypto';
 import { ErrorHandler } from '../helpers/errorHandler';
 
+dotenv.config();
+
 const ENDPOINT = `https://api.onepipe.io/v2/transact`;
-const TOKEN = 'LYJkfbTERDaX9rEcHubF_d988c25b17504a9699140341edf54435';
-const SECRET = 'KgMs87tKCuA8BTEj';
+const TOKEN = process.env.ONE_PIPE_KEY;
+const SECRET = process.env.ONE_PIPE_SECRET;
 
 const GEN_REF = () => Math.random().toString(36).slice(2);
 
