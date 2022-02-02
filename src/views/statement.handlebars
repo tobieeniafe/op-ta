@@ -1,0 +1,45 @@
+<h3>Get Statement</h3>
+
+<br /><br />
+
+<form action='/api/statement' method='post'>
+  <div class='container row'>
+    <div class='col-md-6'>
+      <div class='mb-3'>
+        <label for='firstname' class='form-label'>firstname</label>
+        <input type='text' class='form-control' name='firstname' />
+      </div>
+
+      <div class='mb-3'>
+        <label for='email' class='form-label'>email</label>
+        <input type='email' class='form-control' name='email' />
+      </div>
+
+      <div class='mb-3'>
+        <label for='start_date' class='form-label'>start_date</label>
+        <input type='date' class='form-control' name='start_date' />
+      </div>
+
+    </div>
+
+    <div class='col-md-6'>
+      <div class='mb-3'>
+        <label for='surname' class='form-label'>surname</label>
+        <input type='text' class='form-control' name='surname' />
+      </div>
+
+      <div class='mb-3'>
+        <label for='mobile_no' class='form-label'>mobile_no</label>
+        <input type='tel' class='form-control' name='mobile_no' />
+      </div>
+
+      <div class='mb-3'>
+        <label for='end_date' class='form-label'>end_date</label>
+        <input type='date' class='form-control' name='end_date' />
+      </div>
+
+    </div>
+
+    <button type='submit' class='btn btn-primary'>Submit</button>
+  </div>
+</form>

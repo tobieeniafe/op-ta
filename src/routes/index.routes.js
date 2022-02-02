@@ -1,18 +1,32 @@
 import express from 'express';
 import IndexController from '../controllers/index.controllers';
 import { schemaValidation } from '../helpers/middleware';
-import { openAccountSchema } from '../schemas/index.schema';
+import { accountSchema } from '../schemas/index.schema';
 
 const router = express.Router();
 
 router.post(
-  '/open',
-  schemaValidation(openAccountSchema),
+  '/open-account',
+  schemaValidation(accountSchema),
   IndexController.openAccount
 );
 
-router.get('/balance', IndexController.getBalance);
+router.post(
+  '/balance',
+  schemaValidation(accountSchema),
+  IndexController.getBalance
+);
 
-router.get('/statement', IndexController.getStatement);
+router.post(
+  '/statement',
+  schemaValidation(accountSchema),
+  IndexController.getStatement
+);
+
+router.post(
+  '/collect',
+  schemaValidation(accountSchema),
+  IndexController.collect
+);
 
 module.exports = router;
